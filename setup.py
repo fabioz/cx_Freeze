@@ -176,6 +176,9 @@ if sys.platform == "win32":
                 libraries = ["advapi32", "cx_Logging"],
                 include_dirs = includeDirs)
         extensions.append(service)
+        
+extensions[1].extra_link_args=['-lpython2.7']
+extensions[2].extra_link_args=['-lpython2.7']
 
 # define package data
 packageData = []
